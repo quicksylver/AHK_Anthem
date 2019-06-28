@@ -1,3 +1,7 @@
+WinGet, Anthem, List, Anthem
+#ifWinActive Anthem
+; to force the hotkeys only to Anthem
+
 toggle1 := false
 toggle2 := false
 toggle3 := false
@@ -50,7 +54,7 @@ $F2::
 				GuiControl,, MyText3,
         ; Choose a delay here!
         SetTimer, Send2, 300
-		GuiControl,, MyText2, F2 ENABLED
+		GuiControl,, MyText2, FLEXXI AUTO-SALVAGE ON
     }
 return
 
@@ -69,21 +73,25 @@ $F3::
 			GuiControl,, MyText2,
         ; Choose a delay here!
         SetTimer, Send3, 300
-		GuiControl,, MyText3, F3 ENABLED
+		GuiControl,, MyText3, CREATE CONSUMABLE ON
     }
 return
 
 Send1:
+	ifWinActive, Anthem
 	Send {f down}  ; Press down the up-arrow key.
 	Sleep 600  ; Keep it down for 600 ms.
 	Send {f up}  ; Release the up-arrow key.
 return
 
 Send2:
+	ifWinActive, Anthem
 	Send {f}  ; Press the F key.
 	Send {Right}  ; Press right-arrow key.
 	Send {f}  ; Press the F key.
 	Send {Right}  ; Press right-arrow key.
+	Send {f}  ; Press the F key.
+	Send {Down}  ; Press down-arrow key.
 	Send {f}  ; Press the F key.
 	Send {Down}  ; Press down-arrow key.
 	Send {f}  ; Press the F key.
@@ -92,10 +100,12 @@ Send2:
 	Send {Left}  ; Press left-arrow key.
 	Send {f}  ; Press the F key.
 	Send {Up}  ; Press up-arrow key.
-
+	Send {f}  ; Press the F key.
+	Send {Up}  ; Press up-arrow key.
 return
 
 Send3:
+	ifWinActive, Anthem
 	Send {space down}  ; Press down the up-arrow key.
 	Sleep 1100  ; Keep it down for 1100 ms.
 	Send {space up}  ; Release the up-arrow key.

@@ -35,7 +35,7 @@ $F1::
 			GuiControl,, MyText3,
         ; Choose a delay here!
         SetTimer, Send1, 300
-		GuiControl,, MyText, AUTO-SALVAGE ON
+		GuiControl,, MyText, SALVAGE ON
     }
 return
 
@@ -54,7 +54,7 @@ $F2::
 				GuiControl,, MyText3,
         ; Choose a delay here!
         SetTimer, Send2, 300
-		GuiControl,, MyText2, FLEXXI AUTO-SALVAGE ON
+		GuiControl,, MyText2, FLEXXI SALVAGE ON
     }
 return
 
@@ -86,22 +86,22 @@ return
 
 Send2:
 	ifWinActive, Anthem
-	Send {f}  ; Press the F key.
-	Send {Right}  ; Press right-arrow key.
-	Send {f}  ; Press the F key.
-	Send {Right}  ; Press right-arrow key.
-	Send {f}  ; Press the F key.
-	Send {Down}  ; Press down-arrow key.
-	Send {f}  ; Press the F key.
-	Send {Down}  ; Press down-arrow key.
-	Send {f}  ; Press the F key.
-	Send {Left}  ; Press left-arrow key.
-	Send {f}  ; Press the F key.
-	Send {Left}  ; Press left-arrow key.
-	Send {f}  ; Press the F key.
-	Send {Up}  ; Press up-arrow key.
-	Send {f}  ; Press the F key.
-	Send {Up}  ; Press up-arrow key.
+	Send {f}{Down}{f}
+	Send {f}{Right}{f}
+	Send {f}{Down}{f}
+	Send {f}{Left}{f}
+	Send {f}{Down}{f}
+	Send {f}{Right}{f}
+	Send {f}{Right}{f}
+	Send {f}{Up}{f}
+	Send {f}{Up}{f}
+	Send {f}{Left}{f}
+	Send {f}{Left}{f}
+	Send {f}{Down}{f}
+	Send {f}{Down}{f}
+	Send {f}{Left}{f}
+	Send {f}{Up}{f}
+	Send {Up}{Up}{Left}{Left}
 return
 
 Send3:

@@ -86,22 +86,12 @@ return
 
 Send2:
 	ifWinActive, Anthem
-	Send {f}{Down}{f}
-	Send {f}{Right}{f}
-	Send {f}{Down}{f}
-	Send {f}{Left}{f}
-	Send {f}{Down}{f}
-	Send {f}{Right}{f}
-	Send {f}{Right}{f}
-	Send {f}{Up}{f}
-	Send {f}{Up}{f}
-	Send {f}{Left}{f}
-	Send {f}{Left}{f}
-	Send {f}{Down}{f}
-	Send {f}{Down}{f}
-	Send {f}{Left}{f}
-	Send {f}{Up}{f}
-	Send {Up}{Up}{Left}{Left}
+	Send {f}
+	Send {Right}{Right}{f}
+	Send {Down}{f}
+	Send {Left}{Left}{f}
+	Send {Up}
+	Send {Up}{f}
 return
 
 Send3:
